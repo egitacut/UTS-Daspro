@@ -1,0 +1,30 @@
+def main ():
+    print("=============================================")
+    print("Selamat Datang Di Parkiran ADA")
+    print("=============================================")
+    type_v = input("Masukkan Tipe Data Kendaraan Anda \n1."\
+    " Untuk Mobil <Mobil>\n2. Untuk Motor <Motor>\nSilahkan Masukkan Tipe Kendaraan : ")
+    jam_masuk = int(input("Masukkan Jam Masuk Kendaraan : "))
+    jam_keluar = int(input("Masukkan Jam Keluar Kendaraan : "))
+
+    if type_v == "1" or type_v == "Mobil" or type_v == "mobil":
+        lama_parkir = jam_keluar - jam_masuk
+        biaya_parkir = lama_parkir * 2000
+        print("=============================================")
+        print("Lama Parkir Motor   : ", lama_parkir, "jam")
+        print("Biaya Parkir Motor  :  Rp.", biaya_parkir)
+        print("=============================================")
+
+    elif type_v == "2" or type_v == "Motor" or type_v == "motor":
+        lama_parkir = jam_keluar - jam_masuk
+        biaya_parkir = lama_parkir * 5000
+        print("=============================================")
+        print("Lama Parkir Mobil   : ", lama_parkir, "jam")
+        print("Biaya Parkir Mobil  :  Rp.", biaya_parkir)
+        print("=============================================")
+
+    else:
+        main()
+
+
+main()
